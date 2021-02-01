@@ -1,6 +1,6 @@
 package com.digite.kata.workflow;
 
-public class SuperWorker implements Worker{
+public class SuperWorker implements LivingWorker{
 
     public void work() {
         //.... working much more
