@@ -1,4 +1,4 @@
-package workflow;
+package com.digite.kata.workflow;
 
 public class Manager {
 
