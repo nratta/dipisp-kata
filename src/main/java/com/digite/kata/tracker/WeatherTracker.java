@@ -12,21 +12,17 @@ public class WeatherTracker {
         phone = new Phone();
         emailer = new Emailer();
     }
+
     public WeatherTracker(MediaType type1, MediaType type2) {
         phone = type1;
         emailer = type2;
     }
 
 
-    public void setCurrentConditions(String weatherDescription) {
+    public String setCurrentConditions(String weatherDescription, MediaType mediaTYpe) {
         this.currentConditions = weatherDescription;
-        if (weatherDescription == "rainy") {
-            String alert = phone.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
-        if (weatherDescription == "sunny") {
-            String alert = emailer.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
+        String alert = mediaTYpe.generateWeatherAlert(weatherDescription);
+        System.out.print(alert);
+        return alert;
     }
 }

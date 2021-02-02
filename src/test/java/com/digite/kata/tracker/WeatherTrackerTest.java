@@ -17,13 +17,14 @@ public class WeatherTrackerTest {
     public void testSetCurrentConditionsAsRainy()
     {
         WeatherTracker tracker = new WeatherTracker(type1, type2);
+        assertEquals("It is rainy", tracker.setCurrentConditions("rainy", type1));
        // assert   tracker.setCurrentConditions("rainy");
     }
     @Test
     public void testSetCurrentConditionsAsSunny()
     {
         WeatherTracker tracker = new WeatherTracker(type1, type2);
-        //tracker.setCurrentConditions("sunny");
+        assertEquals("It is sunny", tracker.setCurrentConditions("sunny", type2));
 
     }
 }
