@@ -28,4 +28,8 @@ public class Rental implements RentalInterface{
     public double calculatePrice(int daysRented) {
         return 0;
     }
+    public int getfrequentRenterPoints(int daysRented)
+    {
+        return 0;
+    }
 }
