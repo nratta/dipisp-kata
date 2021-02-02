@@ -10,8 +10,8 @@ public class NewReleaseTest {
     public void testCalculatePrice()
     {
         Movie movie =  new NewReleaseMovie("ABCD", 1);
-        int daysRented = 2;
-        assertEquals(6, movie.calculatePrice(daysRented), 0);
+        int daysRented = 3;
+        assertEquals(9, movie.calculatePrice(daysRented), 0);
 
     }
 }
