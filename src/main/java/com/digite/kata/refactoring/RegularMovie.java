@@ -5,10 +5,12 @@ public class RegularMovie  extends Movie{
     public RegularMovie(String title, int priceCode) {
         super(title, priceCode);
     }
-
-    public double calcultePrice(int daysRented)
+@Override
+    public double calculatePrice(int daysRented)
     {
-        //double amount =
-        return 0;
+        double thisAmount = 2;
+        if (daysRented > 2)
+            thisAmount += (daysRented - 2) * 1.5;
+        return thisAmount;
     }
 }
