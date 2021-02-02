@@ -22,18 +22,18 @@ class Customer {
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        Enumeration rentals = _rentals.elements();
         String result = "Rental Record for " + getName() + "\n";
-        while (rentals.hasMoreElements()) {
+        for(Rental each : _rentals)
+        {
             double thisAmount = 0;
-            Rental each = (Rental) rentals.nextElement();
             thisAmount += each.calculatePrice(each.getDaysRented());
             frequentRenterPoints++;
-           frequentRenterPoints += each.getfrequentRenterPoints(each.getDaysRented());
+            frequentRenterPoints += each.getfrequentRenterPoints(each.getDaysRented());
             result += "\t" + each.getMovie().getTitle() + "\t" +
                     String.valueOf(thisAmount) + "\n";
             totalAmount += thisAmount;
         }
+
         result += "Amount owed is " + String.valueOf(totalAmount) +
                 "\n";
         result += "You earned " + String.valueOf(frequentRenterPoints)
