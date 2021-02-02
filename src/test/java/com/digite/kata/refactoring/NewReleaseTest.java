@@ -9,9 +9,11 @@ public class NewReleaseTest {
     @Test
     public void testCalculatePrice()
     {
-        Movie movie =  new NewReleaseMovie("ABCD", 1);
+        Movie movie = new Movie("ABCD");
         int daysRented = 3;
-        assertEquals(9, movie.calculatePrice(daysRented), 0);
+        Rental rental =  new NewReleaseMovie(movie, 1,3 );
+
+        assertEquals(9, rental.calculatePrice(daysRented), 0);
 
     }
 }

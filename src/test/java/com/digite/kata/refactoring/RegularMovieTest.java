@@ -10,9 +10,10 @@ public class RegularMovieTest
     @Test
     public void testCalculatePrice()
     {
-        Movie movie =  new RegularMovie("XYZ", 0);
+        Movie movie = new Movie("XYZ");
         int daysRented = 3;
-        assertEquals(3.5, movie.calculatePrice(daysRented), 0);
+        Rental rental =  new RegularMovie(movie, daysRented,0 );
+        assertEquals(3.5, rental.calculatePrice(daysRented), 0);
 
     }
 

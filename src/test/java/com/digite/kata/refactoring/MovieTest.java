@@ -13,6 +13,6 @@ public class MovieTest {
     @Test
     public void testTitle()
     {
-        Movie movie = new Movie("ABC",1);
+        Movie movie = new Movie("ABC");
     }
 }
