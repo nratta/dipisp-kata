@@ -1,9 +1,9 @@
 package com.digite.kata.refactoring;
 
-public class NewReleaseMovie  extends Movie{
+public class NewReleaseMovie  extends Rental{
 
-    public NewReleaseMovie(String title, int priceCode) {
-        super(title, priceCode);
+    public NewReleaseMovie(Movie movie, int daysRented, int priceCode) {
+        super(movie, daysRented, priceCode);
     }
     @Override
     public double calculatePrice(int daysRented)

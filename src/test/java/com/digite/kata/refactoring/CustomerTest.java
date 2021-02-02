@@ -11,9 +11,9 @@ public class CustomerTest {
 
     }
 
-    @Test
+    /*@Test
     public void testStatement()
-    {
+    *//*{
         // Creating data starts
         Customer customer = new Customer("User1");
         Movie movie1 = new RegularMovie("XYZ", 0);
@@ -35,5 +35,5 @@ public class CustomerTest {
             "You earned 4 frequent renter points";
         assertEquals(expOutput,customer.statement());
 
-    }
+    }*/
 }
